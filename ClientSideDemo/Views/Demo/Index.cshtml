@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Demo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Demo</h2>
+<ul id="list1">
+    <li id="first">First</li>
+    <li id="second">Second</li>
+    <li id="third">Third</li>
+</ul>
+<ul id="list2" class="dont-show">
+    <li>Hello</li>
+    <li>World</li>
+</ul>
+
+<ul id="list3">
+    <li>Fading</li>
+    <li>List</li>
+</ul>
+
+<button id="btn1">
+    Animate me!
+</button>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            $("#list1").append("<li>Hello</li>");
+            
+            var tmp = $("#first");
+            var tmp1 = $("#first").on("click",
+                function() {
+                    console.log(tmp);
+                    console.log(tmp1);
+                    $("#first").remove();
+                });
+
+            // Shows or hides list2 depending on whether it's visible or not.
+            var list2 = $("#list2");
+            $("#third").on("click",
+                function() {
+                    if (list2.hasClass("dont-show"))
+                        list2.removeClass("dont-show");
+                    else
+                        list2.addClass("dont-show");
+                });
+
+            // Fades list3 back and forth.
+            $("#second").on("click",
+                function() {
+                    $("#list3").toggle(1000,
+                        function() {
+                            console.log("Fade's over");
+                        });
+                });
+
+            // Animates the width of btn1 back and forth.
+            var button = $("#btn1");
+            button.on("click",
+                function () {
+                    if (button.width() > 500) {
+                        button.animate({
+                                width: "100px"
+                            },
+                            2000,
+                            function() {
+                                console.log("Animation over");
+                            });
+                    } else {
+                        button.animate({
+                                width: "600px"
+                            }, 2000,
+                            function() {
+                                console.log("Animation over");
+                            });
+                    }
+                    
+                });
+        });
+        
+    </script>
+}
+
