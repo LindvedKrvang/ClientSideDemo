@@ -9,6 +9,8 @@ namespace ClientSideDemo
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/Reveal/reveal.js",
+                        "~/Scripts/html2canvas/html2canvas.js",
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -23,6 +25,7 @@ namespace ClientSideDemo
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/Reveal/css/reveal.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

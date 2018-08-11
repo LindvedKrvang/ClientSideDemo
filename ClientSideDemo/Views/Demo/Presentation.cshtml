@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Presentation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="reveal presentation-container">
+    <div class="slides">
+        <section>
+            <p class="text-center" style="font-size: 20px">Hello There</p>
+            <p class="text-center">This is just some arbitrary text to play around with</p>
+            <p class="pull-right">This text is to the rigth</p>
+            <p class="pull-left">This text is to the left</p>
+        </section>
+        <section>
+            <p>Slide 2</p>
+        </section>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        Reveal.initialize();
+    </script>
+}

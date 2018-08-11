@@ -5,24 +5,52 @@
 }
 
 <h2>Demo</h2>
-<ul id="list1">
-    <li id="first">First</li>
-    <li id="second">Second</li>
-    <li id="third">Third</li>
-</ul>
-<ul id="list2" class="dont-show">
-    <li>Hello</li>
-    <li>World</li>
-</ul>
 
-<ul id="list3">
-    <li>Fading</li>
-    <li>List</li>
-</ul>
+<div class="row">
+    <div class="col-md-2">
+        <ul id="list1">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+        <ul id="list2" class="dont-show">
+            <li>Hello</li>
+            <li>World</li>
+        </ul>
 
-<button id="btn1">
-    Animate me!
-</button>
+        <ul id="list3">
+            <li>Fading</li>
+            <li>List</li>
+        </ul>
+
+        <button id="btn1">
+            Animate me!
+        </button>
+        
+        <button id="btn2">
+            Capture
+        </button>
+    </div>
+    <div id="canvas" class="col-md-8 canvas-container">
+        <div>
+            <section>
+                <p class="text-center" style="font-size: 20px">Hello There</p>
+                <p class="text-center">This is just some arbitrary text to play around with</p>
+                <p class="pull-right">This text is to the rigth</p>
+                <p class="pull-left">This text is to the left</p>
+            </section>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <ul id="display">
+            
+        </ul>
+    </div>
+    <div >
+        
+    </div>
+</div>
+
 
 @section scripts
 {
@@ -79,7 +107,33 @@
                     }
                     
                 });
+
+            var btn2 = $("#btn2");
+            btn2.on("click",
+                function() {
+                    html2canvas(document.querySelector("#canvas")).then(function (canvas) {
+                        console.log(canvas);
+
+                        var scaleRatio = $("#display").width() / $("#canvas").width();
+                        var origWidth = canvas.getAttribute("width");
+                        var newWidth = origWidth * scaleRatio;
+
+                        var newHeight = canvas.getAttribute("height") * scaleRatio;
+
+                        console.log(newWidth + " " + newHeight);
+
+                        var jCanvas = $(canvas);
+                        jCanvas.attr("style", "width: " + newWidth + "px; height: " + newHeight + "px");
+
+                        //canvas.setAttribute("style", "width: 130px; height: 17px"); // Have to set 'style' to override the element.style
+
+                        $("#display").append(jCanvas);
+                    });
+                });
+
+            
         });
+        
         
     </script>
 }

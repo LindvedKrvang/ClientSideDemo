@@ -159,6 +159,20 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Reveal\css\print\paper.css" />
+    <Content Include="Content\Reveal\css\print\pdf.css" />
+    <Content Include="Content\Reveal\css\reveal.css" />
+    <Content Include="Content\Reveal\css\theme\beige.css" />
+    <Content Include="Content\Reveal\css\theme\black.css" />
+    <Content Include="Content\Reveal\css\theme\blood.css" />
+    <Content Include="Content\Reveal\css\theme\league.css" />
+    <Content Include="Content\Reveal\css\theme\moon.css" />
+    <Content Include="Content\Reveal\css\theme\night.css" />
+    <Content Include="Content\Reveal\css\theme\serif.css" />
+    <Content Include="Content\Reveal\css\theme\simple.css" />
+    <Content Include="Content\Reveal\css\theme\sky.css" />
+    <Content Include="Content\Reveal\css\theme\solarized.css" />
+    <Content Include="Content\Reveal\css\theme\white.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -168,7 +182,24 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Reveal\css\reveal.scss" />
+    <Content Include="Content\Reveal\css\theme\README.md" />
+    <Content Include="Content\Reveal\css\theme\source\beige.scss" />
+    <Content Include="Content\Reveal\css\theme\source\black.scss" />
+    <Content Include="Content\Reveal\css\theme\source\blood.scss" />
+    <Content Include="Content\Reveal\css\theme\source\league.scss" />
+    <Content Include="Content\Reveal\css\theme\source\moon.scss" />
+    <Content Include="Content\Reveal\css\theme\source\night.scss" />
+    <Content Include="Content\Reveal\css\theme\source\serif.scss" />
+    <Content Include="Content\Reveal\css\theme\source\simple.scss" />
+    <Content Include="Content\Reveal\css\theme\source\sky.scss" />
+    <Content Include="Content\Reveal\css\theme\source\solarized.scss" />
+    <Content Include="Content\Reveal\css\theme\source\white.scss" />
+    <Content Include="Content\Reveal\css\theme\template\mixins.scss" />
+    <Content Include="Content\Reveal\css\theme\template\settings.scss" />
+    <Content Include="Content\Reveal\css\theme\template\theme.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\html2canvas\html2canvas.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -179,6 +210,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Reveal\reveal.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -194,6 +226,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Demo\Index.cshtml" />
+    <Content Include="Views\Demo\RevealPartialView.cshtml" />
+    <Content Include="Views\Demo\Presentation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

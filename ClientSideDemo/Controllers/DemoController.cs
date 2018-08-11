@@ -13,5 +13,10 @@ namespace ClientSideDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult Presentation()
+        {
+            return View();
+        }
     }
 }

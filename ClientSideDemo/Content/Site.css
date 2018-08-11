@@ -28,4 +28,21 @@ textarea {
             
 }
 
+.canvas-container {
+    border: solid 2px;
+    width: 350px;
+    /*height: 350px;*/
+}
 
+.auto-resize {
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*transform: scaleX(0.2);*/
+    /*transform: scaleY(0.5);*/
+    transform: scale(0.3);
+}
+
+.presentation-container {
+    width: 800px;
+    height: 500px;
+}
